@@ -11,9 +11,71 @@
 
   <style>
     @font-face {
-      font-family: "sample_font";
+      font-family: "kmedium";
       src: url("assets/css/KoPubDotumMedium.ttf");
     }
+
+    @font-face {
+      font-family: "kbold";
+      src: url("assets/css/KoPubDotumBold.ttf");
+    }
+
+    @font-face {
+      font-family: "kligth";
+      src: url("assets/css/KoPubDotumLight.ttf");
+    }
+
+    @font-face {
+      font-family: "cam3";
+      src: url("assets/css/a옛날사진관3.ttf");
+    }
+
+    @font-face {
+      font-family: "cam1";
+      src: url("assets/css/a옛날사진관1.ttf");
+    }
+
+    @font-face {
+      font-family: "cam2";
+      src: url("assets/css/a옛날사진관2.ttf");
+    }
+
+    @font-face {
+      font-family: "cam4";
+      src: url("assets/css/a옛날사진관4.ttf");
+    }
+
+    @font-face {
+      font-family: "cam5";
+      src: url("assets/css/a옛날사진관5.ttf");
+    }
+
+    @font-face {
+      font-family: "nexon";
+      src: url("assets\css\NEXON Lv1 Gothic Low OTF Bold.otf");
+    }
+
+    @font-face {
+      font-family: "gbold";
+      src: url("assets\css\GmarketSansTTFBold.ttf");
+    }
+
+    @font-face {
+      font-family: "gmedium";
+      src: url("assets\css\GmarketSansTTFMedium.ttf");
+    }
+
+    @font-face {
+      font-family: "gligth";
+      src: url("assets\css\GmarketSansTTFLight.ttf");
+    }
+
+    @font-face {
+      font-family: "nsquare";
+      src: url("assets\css\NanumSquareB.ttf");
+    }
+
+    
   </style>
 
   <!-- Favicons -->
@@ -70,6 +132,7 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
+      <!-- ======= 영문은 글씨체가 적용 안됨. ======= -->
   <section id="hero">
     <div class="hero-container">
       <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -82,11 +145,11 @@
           <div class="carousel-item active" style="background: url(assets/img/slide/slide-1.jpg)">
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown"><span>P</span>recedents <span>I</span>n <span>N</span>ews  </h2>
+                <h2 class="animate__animated animate__fadeInDown" style ="font-family:'nexon';"><span>P</span>recedents <span>I</span>n <span>N</span>ews  </h2>
                 
-                <p class="animate__animated animate__fadeInUp" style="font-family:sample_font; width: 100%;">PIN서비스는 뉴스와 관련된 <b>유사한 판례</b>를 제공합니다.<br>
+                <p class="animate__animated animate__fadeInUp" style="font-family:'kmedium'; width: 100%;">PIN서비스는 뉴스와 관련된 <b>유사한 판례</b>를 제공합니다.<br>
                   우리는 <b>합리적이고 통찰력 있는 판단</b>을 지향합니다. </p>
-                <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
+                <a class="btn-get-started animate__animated animate__fadeInUp" style ="font-family:'gbold';" href="about.html">Read More</a>
               </div>
             </div>
           </div>
@@ -105,24 +168,23 @@
           <div class="col-lg-4">
             <div class="icon-box">
               <i class="bi bi-bar-chart"></i>
-              <h3><a href="">일상 속 뉴스를 <b>신속하게 ! </b></a></h3>
-              <p style="font-family: 'Black Han Sans', sans-serif;"></p>
-              <p>다양한 언론사의 뉴스를 신속하게 구독하실 수 있습니다.</p>
-              <p style="font-family: 'Nanum Gothic', sans-serif;"></p>
+              <h3 style="font-family: 'cam3'"><a href="">일상 속 뉴스를 <b>신속하게 ! </b></a></h3>
+              <p style="font-family: 'kmedium'"></p>
+              <p style="font-family: 'kmedium'">다양한 언론사의 뉴스를 신속하게 구독하실 수 있습니다.</p>
             </div>
           </div>
           <div class="col-lg-4 mt-4 mt-lg-0">
             <div class="icon-box">
               <i class="bi bi-card-checklist"></i>
-              <h3><a href="">뉴스 속 판례를 정확하게 !</a></h3>
-              <p>뉴스와 유사한 판례를 정확하게 확인하실 수 있습니다.</p>
+              <h3 style="font-family: 'cam3'"><a href="">뉴스 속 판례를 정확하게 !</a></h3>
+              <p style="font-family: 'kmedium'">뉴스와 유사한 판례를 정확하게 확인하실 수 있습니다.</p>
             </div>
           </div>
           <div class="col-lg-4 mt-4 mt-lg-0">
             <div class="icon-box">
               <i class="bi bi-binoculars"></i>
-              <h3><a href="">판례 속 법률을 쉽게 !</a></h3>
-              <p>판례 속 법을 쉽게 해석하실 수 있습니다.</p>
+              <h3 style = "font-family: 'cam3';"><a href="">판례 속 법률을 쉽게 !</a></h3>
+              <p style="font-family: 'kmedium'">판례 속 법을 쉽게 해석하실 수 있습니다.</p>
             </div>
           </div>
         </div>
@@ -144,13 +206,13 @@
 
               
             </p>
-            <h3>여러분의 일상과 법은 'PIN'으로 이어집니다.</h3>
-            <p class="font-italic">
-              PIN은 일상 속 뉴스를 신속하게, 뉴스 속 판례를 정확하게, 판례 속 법을 쉽게 서비스합니다.
+            <p style="font-family: 'cam4' ; font-size: 28px;"><b>여러분의 일상과 법은 'PIN'으로 이어집니다.</b></p>
+            <p class="font-italic" style="font-family: 'cam3'; font-size: 16px;">
+              일상 속 뉴스를 '신속'하게 ! 뉴스 속 판례를 '정확'하게 ! 판례 속 법을 '쉽게' !
             </p>
             <ul>
-              <li><i class="bi bi-check-circle"></i>  <b>합리적인 시선</b>으로 사회를 바라보고 싶습니다. 일반적인 법 감정이 아닌 '진짜 판례'를 통해 객관적이고 이성적인 판단을 돕습니다.</li>
-              <li><i class="bi bi-check-circle"></i> <b>통찰력있는 시선</b>으로 사회를 바라보고 싶습니다. 특정 사건만을 편협하게 바라보지 않고, 기존의 사례들을 활용한 종합적인 판단을 돕습니다<div class=""></div></li>
+              <li><p class="bi bi-check-circle" style="font-family: 'kmedium'; font-size: 14px;"> <b> 합리적인 시선</b>으로 사회를 바라봅니다. <br>일반적인 법 감정이 아닌 '진짜 판례'를 통해, 객관적이고 이성적인 판단을 돕습니다. </p></li>
+              <li><p class="bi bi-check-circle" style="font-family: 'kmedium'; font-size: 14px;"> <b> 통찰력있는 시선</b>으로 사회를 바라봅니다. <br> 특정 사건만을 편협하게 바라보지 않고, 기존의 사례들을 활용한 종합적인 판단을 돕습니다</p></li>
             </ul>
             <p>
             
@@ -171,7 +233,7 @@
         <div class="row">
           <div class="col-lg-6">
             <h4>Our Newsletter</h4>
-            <p>PIN 서비스를 정기적으로 구독하실 수 있습니다. 구독 서비스를 이용하실 이메일 주소를 작성해주세요.</p>
+            <p style="font-family: 'kmedium';">PIN 서비스를 정기적으로 구독하실 수 있습니다. <br>구독 서비스를 이용하실 이메일 주소를 작성해주세요.</p>
           </div>
           <div class="col-lg-6">
             <form action="" method="post">
@@ -190,7 +252,7 @@
             <h4>Useful Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
@@ -200,7 +262,6 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
@@ -219,7 +280,7 @@
 
           <div class="col-lg-3 col-md-6 footer-info">
             <h3>About PIN</h3>
-            <p style="width:100%;">PIN 서비스는 뉴스와 관련된 유사한 판례를 제공합니다.<br> 우리는 합리적이고 통찰력 있는 판단을 지향합니다.</p>
+            <p style="width:100%; font-family:'kmedium'">PIN 서비스는 뉴스와 관련된 유사한 판례를 제공합니다.<br> 우리는 합리적이고 통찰력 있는 판단을 지향합니다.</p>
             <div class="social-links mt-3">
               <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
               <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>

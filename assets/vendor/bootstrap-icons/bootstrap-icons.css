@@ -380,7 +380,7 @@ url("./fonts/bootstrap-icons.woff2?4601c71fb26c9277391ec80789bfde9c") format("wo
 .bi-chat::before { content: "\f268"; }
 .bi-check-all::before { content: "\f269"; }
 .bi-check-circle-fill::before { content: "\f26a"; }
-.bi-check-circle::before { content: "\f26b"; }
+.bi-check-circle::before { content: "\f26b"; color: red;}
 .bi-check-square-fill::before { content: "\f26c"; }
 .bi-check-square::before { content: "\f26d"; }
 .bi-check::before { content: "\f26e"; }
