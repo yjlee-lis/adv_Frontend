@@ -9,6 +9,75 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+  <style>
+    @font-face {
+      font-family: "kmedium";
+      src: url("assets/css/KoPubDotumMedium.ttf");
+    }
+
+    @font-face {
+      font-family: "kbold";
+      src: url("assets/css/KoPubDotumBold.ttf");
+    }
+
+    @font-face {
+      font-family: "kligth";
+      src: url("assets/css/KoPubDotumLight.ttf");
+    }
+
+    @font-face {
+      font-family: "cam3";
+      src: url("assets/css/a옛날사진관3.ttf");
+    }
+
+    @font-face {
+      font-family: "cam1";
+      src: url("assets/css/a옛날사진관1.ttf");
+    }
+
+    @font-face {
+      font-family: "cam2";
+      src: url("assets/css/a옛날사진관2.ttf");
+    }
+
+    @font-face {
+      font-family: "cam4";
+      src: url("assets/css/a옛날사진관4.ttf");
+    }
+
+    @font-face {
+      font-family: "cam5";
+      src: url("assets/css/a옛날사진관5.ttf");
+    }
+
+    @font-face {
+      font-family: "nexon";
+      src: url("assets\css\NEXON Lv1 Gothic Low OTF Bold.otf");
+    }
+
+    @font-face {
+      font-family: "gbold";
+      src: url("assets\css\GmarketSansTTFBold.ttf");
+    }
+
+    @font-face {
+      font-family: "gmedium";
+      src: url("assets\css\GmarketSansTTFMedium.ttf");
+    }
+
+    @font-face {
+      font-family: "gligth";
+      src: url("assets\css\GmarketSansTTFLight.ttf");
+    }
+
+    @font-face {
+      font-family: "nsquare";
+      src: url("assets\css\NanumSquareB.ttf");
+    }
+
+    
+  </style>
+
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -91,7 +160,8 @@
           <nav class="accordion arrows">
             <input type="radio" name="accordion" id="cb0" />
             <section class="box" >
-              <label class="box-title" for="cb0" >PIN 서비스 이용 튜토리얼</label>
+
+              <label class="box-title" for="cb0" style ="font-family:'kbold'; font-size: 22px;">PIN 서비스 이용 튜토리얼</label>
               <label class="box-close" for="acc-close"></label>
               <div class="box-content">Click on an item to open. Click on its header or the list header to close.</div>
             </section>
@@ -102,19 +172,20 @@
           <div class="col-md-8">
             <form>
               <div class="form-group">
-                <label>Title:</label>
+                <label style ="font-family:'kbold';">Title:</label>
                 <input type="text" name="name" class="form-control" >
               </div>
               <div class="form-group">
-                <label>Add Tags:</label><br/>
+                <label style ="font-family:'kbold';">Add Tags:</label><br/>
                 <input type="text" name="tags" placeholder="Tags" class="tm-input form-control tm-input-info"/>
               </div>
               <div class="form-group">
-                <label>Details:</label>
+                <label style ="font-family:'kbold';">Details:</label>
                 <textarea class="form-control" style="height:300px;"></textarea>
               </div>
               <div class="form-group">
-                <button class="btn btn-success">Submit</button>
+                <br>
+                <button class="btn btn-success" style ="font-family:'kbold';">Submit</button>
               </div>
             </form>
             <script type="text/javascript">
@@ -125,35 +196,35 @@
           <div class="col-md-4">
             <nav class="accordion arrows">
               <header class="box">
-                <label for="acc-close" class="box-title">유사 판례 리스트</label>
+                <label for="acc-close" class="box-title" style ="font-family:'kbold';">유사 판례 리스트</label>
               </header>
               <input type="radio" name="accordion" id="cb1" />
               <section class="box">
-                <label class="box-title" for="cb1">유사 판례1</label>
+                <label class="box-title" for="cb1" style ="font-family:'kmedium';">유사 판례 1</label>
                 <label class="box-close" for="acc-close"></label>
                 <div class="box-content">Click on an item to open. Click on its header or the list header to close.</div>
               </section>
               <input type="radio" name="accordion" id="cb2" />
               <section class="box">
-                <label class="box-title" for="cb2">유사 판례2</label>
+                <label class="box-title" for="cb2" style ="font-family:'kmedium';">유사 판례 2</label>
                 <label class="box-close" for="acc-close"></label>
                 <div class="box-content">Add the class 'arrows' to nav.accordion to add dropdown arrows.</div>
               </section>
               <input type="radio" name="accordion" id="cb3" />
               <section class="box">
-                <label class="box-title" for="cb3">유사 판례3</label>
+                <label class="box-title" for="cb3" style ="font-family:'kmedium';">유사 판례 3</label>
                 <label class="box-close" for="acc-close"></label>
                 <div class="box-content">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque finibus tristique nisi, maximus ullamcorper ante finibus eget.</div>
               </section>
               <input type="radio" name="accordion" id="cb4" />
               <section class="box">
-                <label class="box-title" for="cb4" >요약/용어 설명</label>
+                <label class="box-title" for="cb4" style ="font-family:'kmedium';">요약/용어 설명</label>
                 <label class="box-close" for="acc-close"></label>
                 <div class="box-content">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque finibus tristique nisi, maximus ullamcorper ante finibus eget.</div>
               </section>
               <input type="radio" name="accordion" id="cb5" />
               <section class="box">
-                <label class="box-title" for="cb5" >관련 법규 이동</label>
+                <label class="box-title" for="cb5" style ="font-family:'kmedium';">관련 법규 이동</label>
                 <label class="box-close" for="acc-close"></label>
                 <div class="box-content">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque finibus tristique nisi, maximus ullamcorper ante finibus eget.</div>
               </section>
