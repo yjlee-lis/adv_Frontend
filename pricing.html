@@ -177,7 +177,7 @@
           <div class="col-md-8">
             <form>
               <div class="form-group">
-                <label style="font-family:'kbold';">Title:</label>
+                <label style="font-family:'kbold';">뉴스 제목:</label>
                 <input type="text" name="name" class="form-control">
               </div>
               <br>
@@ -188,14 +188,14 @@
               <br>
               <div class="form-group">
                 <label style="font-family:'kbold';">뉴스 입력:</label>
-                <input id="news"></input>
+                <textarea class="form-control" style="height:300px;" id="news" ></textarea>
+                <input type="text" class="form-control" style="height:300px;" id="news" onmouseout="getNews()"></input>
               </div>
               <br>
 
               <div class="form-group">
                 <br>
-                <button id="button1" class="btn btn-success" style="font-family:'kbold';"
-                  onclick="getPrecedent();">Submit</button>
+                <input type="button" value="Submit" id="button1" class="btn btn-success" style="font-family:'kbold';" onclick="getPrecedent()"></input>
               </div>
             </form>
 
@@ -350,48 +350,43 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-    const news = "피해자";
+    var news = "피해자";
 
     // 1. 버튼클릭시 뉴스 업데이트 시키기
-    function getNews() {
-
-    }
-
-    // 2. 이부분도 버튼 클릭시 업데이트 되게 만들기
-    $.ajax({
-      url: 'http://localhost:5000/pin',
-      type: 'POST',
-      data: { "news": news }
-    }).done((data, textStatus, jqXHR) => {
-      console.log('성공');
-      console.log(data);
-
-      document.getElementById('sp1').innerHTML = data.similar_precedent1;
-      document.getElementById('sp2').innerHTML = data.similar_precedent2;
-      document.getElementById('sp3').innerHTML = data.similar_precedent3;
-
-      console.log(textStatus);
-      console.log(jqXHR);
-    }).fail((jqXHR, textStatus, errorThrown) => {
-      console.log('실패');
-      console.log(jqXHR);
-      console.log(textStatus);
-      console.log(errorThrown);
-    }).always((param1, param2, param3) => {
-      console.log('종료');
-      console.log(param1);
-      console.log(param2);
-      console.log(param3);
-    }).then((data, textStatus, jqXHR) => {
-      console.log('성공 캐이스')
-    }, (jqXHR, textStatus, errorThrown) => {
-      console.log('실패 캐이스')
-    });
-
     function getPrecedent() {
-      news = document.getElementById("news").value;
-      alert("입력되었습니다.");
-    }
+      news = document.getElementById('news').value;
+      alert("입력되었습니다. 유사판례를 확인해보세요.");
+        $.ajax({
+          url: 'http://localhost:5000/pin',
+          type: 'POST',
+          data: { "news": news }
+        }).done((data, textStatus, jqXHR) => {
+          console.log('성공');
+          console.log(data);
+
+          document.getElementById('sp1').innerHTML = data.similar_precedent1;
+          document.getElementById('sp2').innerHTML = data.similar_precedent2;
+          document.getElementById('sp3').innerHTML = data.similar_precedent3;
+
+          console.log(textStatus);
+          console.log(jqXHR);
+        }).fail((jqXHR, textStatus, errorThrown) => {
+          console.log('실패');
+          console.log(jqXHR);
+          console.log(textStatus);
+          console.log(errorThrown);
+        }).always((param1, param2, param3) => {
+          console.log('종료');
+          console.log(param1);
+          console.log(param2);
+          console.log(param3);
+        }).then((data, textStatus, jqXHR) => {
+          console.log('성공 캐이스')
+        }, (jqXHR, textStatus, errorThrown) => {
+          console.log('실패 캐이스')
+        });
+    };
+
 
   </script>
 
