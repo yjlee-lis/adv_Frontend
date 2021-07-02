@@ -74,8 +74,6 @@
       font-family: "nsquare";
       src: url("assets\css\NanumSquareB.ttf");
     }
-
-    
   </style>
 
   <!-- Favicons -->
@@ -83,7 +81,9 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -97,11 +97,16 @@
   <link href="assets/css/style.css" rel="stylesheet">
 
   <!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/tagmanager/3.0.2/tagmanager.min.css">
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<!-- <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tagmanager/3.0.2/tagmanager.min.js"></script>
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/tagmanager/3.0.2/tagmanager.min.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/tagmanager/3.0.2/tagmanager.min.js"></script>
 
+  <!-- jquery & ajax -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
   <!-- =======================================================
   * Template Name: Eterna - v4.0.1
   * Template URL: https://bootstrapmade.com/eterna-free-multipurpose-bootstrap-template/
@@ -112,30 +117,30 @@
 
 <body>
 
-<!-- ======= Header ======= -->
-<header id="header" class="d-flex align-items-center">
-  <div class="container d-flex justify-content-between align-items-center">
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-between align-items-center">
 
-    <div class="logo">
-      <h1><a href="index.html">PIN</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <div class="logo">
+        <h1><a href="index.html">PIN</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="blog.html">News</a></li>
+          <li><a class="active" href="pricing.html">PIN</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
     </div>
-
-    <nav id="navbar" class="navbar">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="team.html">Team</a></li>
-        <li><a href="blog.html">News</a></li>
-        <li><a class="active" href="pricing.html">PIN</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav><!-- .navbar -->
-
-  </div>
-</header><!-- End Header -->
+  </header><!-- End Header -->
 
   <main id="main">
 
@@ -159,9 +164,9 @@
 
           <nav class="accordion arrows">
             <input type="radio" name="accordion" id="cb0" />
-            <section class="box" >
+            <section class="box">
 
-              <label class="box-title" for="cb0" style ="font-family:'kbold'; font-size: 22px;">PIN 서비스 이용 튜토리얼</label>
+              <label class="box-title" for="cb0" style="font-family:'kbold'; font-size: 22px;">PIN 서비스 이용 튜토리얼</label>
               <label class="box-close" for="acc-close"></label>
               <div class="box-content">Click on an item to open. Click on its header or the list header to close.</div>
             </section>
@@ -172,68 +177,73 @@
           <div class="col-md-8">
             <form>
               <div class="form-group">
-                <label style ="font-family:'kbold';">Title:</label>
-                <input type="text" name="name" class="form-control" >
+                <label style="font-family:'kbold';">Title:</label>
+                <input type="text" name="name" class="form-control">
               </div>
               <br>
               <div class="form-group">
-                <label style ="font-family:'kbold';">Add Tags:</label><br/>
-                <input type="text" name="tags" placeholder="Tags" class="tm-input form-control tm-input-info"/>
+                <label style="font-family:'kbold';">카테고리 선택:</label><br />
+                <input type="text" name="tags" placeholder="Tags" class="tm-input form-control tm-input-info" />
               </div>
               <br>
               <div class="form-group">
-                <label style ="font-family:'kbold';">Details:</label>
-                <textarea class="form-control" style="height:300px;"></textarea>
+                <label style="font-family:'kbold';">뉴스 입력:</label>
+                <input id="news"></input>
               </div>
               <br>
 
               <div class="form-group">
                 <br>
-                <button class="btn btn-success" style ="font-family:'kbold';">Submit</button>
+                <button id="button1" class="btn btn-success" style="font-family:'kbold';"
+                  onclick="getPrecedent();">Submit</button>
               </div>
             </form>
-            <script type="text/javascript">
+
+            <!--- <script type="text/javascript">
               $(".tm-input").tagsManager();
             </script>
+            !--->
 
           </div>
           <div class="col-md-4">
             <nav class="accordion arrows">
               <header class="box">
-                <label for="acc-close" class="box-title" style ="font-family:'kbold';">유사 판례 리스트</label>
+                <label for="acc-close" class="box-title" style="font-family:'kbold';">유사 판례 리스트</label>
               </header>
               <input type="radio" name="accordion" id="cb1" />
               <section class="box">
-                <label class="box-title" for="cb1" style ="font-family:'kmedium';">유사 판례 1</label>
+                <label class="box-title" for="cb1" style="font-family:'kmedium';">유사 판례 1</label>
                 <label class="box-close" for="acc-close"></label>
-                <div class="box-content">Click on an item to open. Click on its header or the list header to close.</div>
+                <div id="sp1" class="box-content"></div>
               </section>
               <input type="radio" name="accordion" id="cb2" />
               <section class="box">
-                <label class="box-title" for="cb2" style ="font-family:'kmedium';">유사 판례 2</label>
+                <label class="box-title" for="cb2" style="font-family:'kmedium';">유사 판례 2</label>
                 <label class="box-close" for="acc-close"></label>
-                <div class="box-content">Add the class 'arrows' to nav.accordion to add dropdown arrows.</div>
+                <div id="sp2" class="box-content"></div>
               </section>
               <input type="radio" name="accordion" id="cb3" />
               <section class="box">
-                <label class="box-title" for="cb3" style ="font-family:'kmedium';">유사 판례 3</label>
+                <label class="box-title" for="cb3" style="font-family:'kmedium';">유사 판례 3</label>
                 <label class="box-close" for="acc-close"></label>
-                <div class="box-content">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque finibus tristique nisi, maximus ullamcorper ante finibus eget.</div>
+                <div id="sp3" class="box-content"></div>
               </section>
               <input type="radio" name="accordion" id="cb4" />
               <section class="box">
-                <label class="box-title" for="cb4" style ="font-family:'kmedium';">요약/용어 설명</label>
+                <label class="box-title" for="cb4" style="font-family:'kmedium';">요약/용어 설명</label>
                 <label class="box-close" for="acc-close"></label>
-                <div class="box-content">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque finibus tristique nisi, maximus ullamcorper ante finibus eget.</div>
+                <div class="box-content">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+                  cubilia Curae; Quisque finibus tristique nisi, maximus ullamcorper ante finibus eget.</div>
               </section>
               <input type="radio" name="accordion" id="cb5" />
               <section class="box">
-                <label class="box-title" for="cb5" style ="font-family:'kmedium';">관련 법규 이동</label>
+                <label class="box-title" for="cb5" style="font-family:'kmedium';">관련 법규 이동</label>
                 <label class="box-close" for="acc-close"></label>
-                <div class="box-content">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque finibus tristique nisi, maximus ullamcorper ante finibus eget.</div>
+                <div class="box-content">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+                  cubilia Curae; Quisque finibus tristique nisi, maximus ullamcorper ante finibus eget.</div>
               </section>
-              
-          
+
+
               <input type="radio" name="accordion" id="acc-close" />
             </nav>
 
@@ -281,7 +291,7 @@
                 <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact</a></li>
               </ul>
             </div>
-          </div>      
+          </div>
 
 
           <div class="col-lg-3 col-md-6 footer-contact">
@@ -295,7 +305,8 @@
 
           <div class="col-lg-3 col-md-6 footer-info">
             <h3>About PIN</h3>
-            <p style="width:100%; font-family:'kmedium'">PIN 서비스는 뉴스와 관련된 유사한 판례를 제공합니다.<br> 우리는 합리적이고 통찰력 있는 판단을 지향합니다.</p>
+            <p style="width:100%; font-family:'kmedium'">PIN 서비스는 뉴스와 관련된 유사한 판례를 제공합니다.<br> 우리는 합리적이고 통찰력 있는 판단을 지향합니다.
+            </p>
             <div class="social-links mt-3">
               <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
               <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -323,7 +334,8 @@
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -336,6 +348,52 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    const news = "피해자";
+
+    // 1. 버튼클릭시 뉴스 업데이트 시키기
+    function getNews() {
+
+    }
+
+    // 2. 이부분도 버튼 클릭시 업데이트 되게 만들기
+    $.ajax({
+      url: 'http://localhost:5000/pin',
+      type: 'POST',
+      data: { "news": news }
+    }).done((data, textStatus, jqXHR) => {
+      console.log('성공');
+      console.log(data);
+
+      document.getElementById('sp1').innerHTML = data.similar_precedent1;
+      document.getElementById('sp2').innerHTML = data.similar_precedent2;
+      document.getElementById('sp3').innerHTML = data.similar_precedent3;
+
+      console.log(textStatus);
+      console.log(jqXHR);
+    }).fail((jqXHR, textStatus, errorThrown) => {
+      console.log('실패');
+      console.log(jqXHR);
+      console.log(textStatus);
+      console.log(errorThrown);
+    }).always((param1, param2, param3) => {
+      console.log('종료');
+      console.log(param1);
+      console.log(param2);
+      console.log(param3);
+    }).then((data, textStatus, jqXHR) => {
+      console.log('성공 캐이스')
+    }, (jqXHR, textStatus, errorThrown) => {
+      console.log('실패 캐이스')
+    });
+
+    function getPrecedent() {
+      news = document.getElementById("news").value;
+      alert("입력되었습니다.");
+    }
+
+  </script>
 
 </body>
 
