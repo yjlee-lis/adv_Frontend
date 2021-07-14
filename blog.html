@@ -99,10 +99,10 @@
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John
-                      Doe</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time
-                        datetime="2020-01-01">July 2, 2020</time></a></li>
+                  <li class="d-flex align-items-center"><i id="m0" class="bi bi-person"></i> <a href="blog-single.html">
+                      </a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time id="d0"
+                        datetime="2020-01-01"></time></a></li>
                 </ul>
               </div>
 
@@ -125,10 +125,10 @@
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John
-                      Doe</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time
-                        datetime="2020-01-01">July 2, 2020</time></a></li>
+                  <li class="d-flex align-items-center"><i id="m1" class="bi bi-person"></i> <a href="blog-single.html">
+                     </a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time id="d1"
+                        datetime="2020-01-01"></time></a></li>
                 </ul>
               </div>
 
@@ -151,10 +151,10 @@
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John
-                      Doe</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time
-                        datetime="2020-01-01">July 2, 2020</time></a></li>
+                  <li class="d-flex align-items-center"><i id="m2" class="bi bi-person"></i> <a href="blog-single.html">
+                      </a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time id="d2"
+                        datetime="2020-01-01"></time></a></li>
                 </ul>
               </div>
 
@@ -177,10 +177,10 @@
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John
-                      Doe</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time
-                        datetime="2020-01-01">July 2, 2020</time></a></li>
+                  <li class="d-flex align-items-center"><i id="m3" class="bi bi-person"></i> <a href="blog-single.html">
+                      </a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time id="d3"
+                        datetime="2020-01-01"></time></a></li>
                 </ul>
               </div>
 
@@ -203,10 +203,9 @@
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John
-                      Doe</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time
-                        datetime="2020-01-01">July 2, 2020</time></a></li>
+                  <li class="d-flex align-items-center"><i id="m4" class="bi bi-person"></i> <a href="blog-single.html"></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time id="d4"
+                        datetime="2020-01-01"></time></a></li>
                 </ul>
               </div>
 
@@ -386,7 +385,7 @@
 
     // 2. page에 해당하는 뉴스 가져오기
     $.ajax({
-        url: 'https://00aa26d414ab.ngrok.io/news',
+        url: 'https://30a3cdf5231a.ngrok.io/news',
         type: 'GET',
         data: { "page": page }
       }).done((data, textStatus, jqXHR) => {
@@ -408,6 +407,20 @@
         document.getElementById('s2').innerHTML = data.news[2].summary;
         document.getElementById('s3').innerHTML = data.news[3].summary;
         document.getElementById('s4').innerHTML = data.news[4].summary;
+
+        // 뉴스 날짜
+        document.getElementById('d0').innerHTML = data.news[0].date;
+        document.getElementById('d1').innerHTML = data.news[1].date;
+        document.getElementById('d2').innerHTML = data.news[2].date;
+        document.getElementById('d3').innerHTML = data.news[3].date;
+        document.getElementById('d4').innerHTML = data.news[4].date;
+
+        // 뉴스 미디어
+        document.getElementById('m0').innerHTML = data.news[0].media;
+        document.getElementById('m1').innerHTML = data.news[1].media;
+        document.getElementById('m2').innerHTML = data.news[2].media;
+        document.getElementById('m3').innerHTML = data.news[3].media;
+        document.getElementById('m4').innerHTML = data.news[4].media;
 
         // 페이지
         document.getElementsByClassName('current').innerHTML = parseInt(data.curPage);
@@ -432,7 +445,7 @@
 
     function callNews(page){
         $.ajax({
-        url: 'https://00aa26d414ab.ngrok.io/news',
+        url: 'https://30a3cdf5231a.ngrok.io/news',
         type: 'GET',
         data: { "page": page }
       }).done((data, textStatus, jqXHR) => {
