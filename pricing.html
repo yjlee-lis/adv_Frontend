@@ -198,7 +198,6 @@
               <div class="form-group">
                 <label style="font-family:'kbold';">뉴스 입력:</label>
                 <textarea class="form-control" style="height:300px;" id="news" ></textarea>
-                <input type="text" class="form-control" style="height:300px;" id="news" onmouseout="getNews()"></input>
               </div>
               <br>
 
@@ -359,6 +358,7 @@
   <script src="assets/js/main.js"></script>
 
   <script>
+    var URL = 'http://localhost:5000/pin';
     var news = "피해자";
 
     // 1. 버튼클릭시 뉴스 업데이트 시키기
@@ -366,7 +366,7 @@
       news = document.getElementById('news').value;
       alert("입력되었습니다. 유사판례를 확인해보세요.");
         $.ajax({
-          url: 'http://localhost:5000/pin',
+          url: URL,
           type: 'POST',
           data: { "news": news }
         }).done((data, textStatus, jqXHR) => {

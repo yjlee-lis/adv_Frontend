@@ -246,14 +246,15 @@
               <h3 class="sidebar-title">Categories</h3>
               <div class="sidebar-item categories">
                 <ul>
-                  <li><a class="active" href="#"> 교육 <span>(25)</span></a></li>
-                  <li><a href="#"> 사건사고 <span>(12)</span></a></li>
-                  <li><a href="#"> 노동 <span>(5)</span></a></li>
-                  <li><a href="#"> 언론 <span>(22)</span></a></li>
-                  <li><a href="#"> 환경 <span>(8)</span></a></li>
-                  <li><a href="#"> 인권/복지 <span>(14)</span></a></li>
-                  <li><a href="#"> 인물 <span>(14)</span></a></li>
-                  <li><a href="#"> 사회일반 <span>(14)</span></a></li>
+                  <li><a class="active" href="#"> 전체</a></li>
+                  <li><a href="#"> 교육</a></li>
+                  <li><a href="#"> 사건사고</a></li>
+                  <li><a href="#"> 노동 </a></li>
+                  <li><a href="#"> 언론 </a></li>
+                  <li><a href="#"> 환경</a></li>
+                  <li><a href="#"> 인권/복지</a></li>
+                  <li><a href="#"> 인물 </a></li>
+                  <li><a href="#"> 사회일반 </a></li>
                 </ul>
               </div><!-- End sidebar categories-->
 
@@ -366,6 +367,7 @@
 
   <!-- 서버통신 -->
   <script>
+    var URL = 'https://104e52a942c8.ngrok.io/news';
 
     // 1. 페이지 지정
     var page = 1;
@@ -385,7 +387,7 @@
 
     // 2. page에 해당하는 뉴스 가져오기
     $.ajax({
-        url: 'https://30a3cdf5231a.ngrok.io/news',
+        url: URL,
         type: 'GET',
         data: { "page": page }
       }).done((data, textStatus, jqXHR) => {
@@ -457,7 +459,7 @@
 
     function callNews(page){
         $.ajax({
-        url: 'https://30a3cdf5231a.ngrok.io/news',
+        url: URL,
         type: 'GET',
         data: { "page": page }
       }).done((data, textStatus, jqXHR) => {
@@ -567,7 +569,7 @@
 
     function get_category(category){
         $.ajax({
-        url: 'https://30a3cdf5231a.ngrok.io/news',
+        url: URL,
         type: 'GET',
         data: { "category": category }
       }).done((data, textStatus, jqXHR) => {
