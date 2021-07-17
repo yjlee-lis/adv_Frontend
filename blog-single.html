@@ -256,11 +256,12 @@
   
     // 2. 뉴스 아이디에 해당하는 뉴스 GET 
     $.ajax({
-        url: 'http://localhost:8080/news/'+news_id,
+        url: 'https://30a3cdf5231a.ngrok.io/news/'+news_id,
         type: 'GET'
     }).done((data, textStatus, jqXHR) => {
         console.log('성공');
         console.log(data);
+        console.log(data.newsId);
         document.getElementById('title').innerHTML = data.title;
         document.getElementById('content').innerHTML = data.content;
         document.getElementById('date').innerHTML = data.date;

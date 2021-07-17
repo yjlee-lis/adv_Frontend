@@ -94,7 +94,7 @@
             <article class="entry">
 
               <h2 class="entry-title">
-                <a id="t0" href="blog-single.html"></a>
+                <a class = "full_news" id="t0" href=""></a><a id="i0"></a>
               </h2>
 
               <div class="entry-meta">
@@ -109,7 +109,7 @@
               <div class="entry-content">
                 <p id='s0'></p>
                 <div class="read-more">
-                  <a href="blog-single.html">Read More</a>
+                  <a class = "full_news" href="blog-single.html">Read More</a>
                 </div>
               </div>
 
@@ -120,7 +120,7 @@
             <article class="entry">
 
               <h2 class="entry-title">
-                <a id="t1" href="blog-single.html"></a>
+                <a class = "full_news" id="t1" href="blog-single.html"></a><a id="i1"></a>
               </h2>
 
               <div class="entry-meta">
@@ -135,7 +135,7 @@
               <div class="entry-content">
                 <p id='s1'></p>
                 <div class="read-more">
-                  <a href="blog-single.html">Read More</a>
+                  <a class = "full_news" href="blog-single.html">Read More</a>
                 </div>
               </div>
 
@@ -146,7 +146,7 @@
             <article class="entry">
 
               <h2 class="entry-title">
-                <a id="t2" href="blog-single.html"></a>
+                <a class = "full_news" id="t2" href="blog-single.html"></a><a id="i2"></a>
               </h2>
 
               <div class="entry-meta">
@@ -161,7 +161,7 @@
               <div class="entry-content">
                 <p id='s2'></p>
                 <div class="read-more">
-                  <a href="blog-single.html">Read More</a>
+                  <a class = "full_news" href="blog-single.html">Read More</a>
                 </div>
               </div>
 
@@ -172,7 +172,7 @@
             <article class="entry">
 
               <h2 class="entry-title">
-                <a id="t3" href="blog-single.html"></a>
+                <a class = "full_news" id="t3" href="blog-single.html"></a><a id="i3"></a>
               </h2>
 
               <div class="entry-meta">
@@ -187,7 +187,7 @@
               <div class="entry-content">
                 <p id='s3'></p>
                 <div class="read-more">
-                  <a href="blog-single.html">Read More</a>
+                  <a class="full_news" href="blog-single.html">Read More</a>
                 </div>
               </div>
 
@@ -198,7 +198,7 @@
             <article class="entry">
 
               <h2 class="entry-title">
-                <a id="t4" href="blog-single.html"></a>
+                <a class="full_news" id="t4" href="blog-single.html"></a><a id="i4"></a>
               </h2>
 
               <div class="entry-meta">
@@ -212,7 +212,7 @@
               <div class="entry-content">
                 <p id='s4'></p>
                 <div class="read-more">
-                  <a href="blog-single.html">Read More</a>
+                  <a class="full_news" href="blog-single.html">Read More</a>
                 </div>
               </div>
 
@@ -422,6 +422,18 @@
         document.getElementById('m3').innerHTML = data.news[3].media;
         document.getElementById('m4').innerHTML = data.news[4].media;
 
+        // 뉴스 아이디
+        document.getElementById('i0').innerHTML = data.news[0].newsId;
+        document.getElementById('i0').hidden = true;
+        document.getElementById('i1').innerHTML = data.news[1].newsId;
+        document.getElementById('i1').hidden = true;
+        document.getElementById('i2').innerHTML = data.news[2].newsId;
+        document.getElementById('i2').hidden = true;
+        document.getElementById('i3').innerHTML = data.news[3].newsId;
+        document.getElementById('i3').hidden = true;
+        document.getElementById('i4').innerHTML = data.news[4].newsId;
+        document.getElementById('i4').hidden = true;
+
         // 페이지
         document.getElementsByClassName('current').innerHTML = parseInt(data.curPage);
 
@@ -468,6 +480,32 @@
         document.getElementById('s3').innerHTML = data.news[3].summary;
         document.getElementById('s4').innerHTML = data.news[4].summary;
 
+        // 뉴스 날짜
+        document.getElementById('d0').innerHTML = data.news[0].date;
+        document.getElementById('d1').innerHTML = data.news[1].date;
+        document.getElementById('d2').innerHTML = data.news[2].date;
+        document.getElementById('d3').innerHTML = data.news[3].date;
+        document.getElementById('d4').innerHTML = data.news[4].date;
+
+        // 뉴스 미디어
+        document.getElementById('m0').innerHTML = data.news[0].media;
+        document.getElementById('m1').innerHTML = data.news[1].media;
+        document.getElementById('m2').innerHTML = data.news[2].media;
+        document.getElementById('m3').innerHTML = data.news[3].media;
+        document.getElementById('m4').innerHTML = data.news[4].media;
+
+        // 뉴스 아이디
+        document.getElementById('i0').innerHTML = data.news[0].newsId;
+        document.getElementById('i0').hidden = true;
+        document.getElementById('i1').innerHTML = data.news[1].newsId;
+        document.getElementById('i1').hidden = true;
+        document.getElementById('i2').innerHTML = data.news[2].newsId;
+        document.getElementById('i2').hidden = true;
+        document.getElementById('i3').innerHTML = data.news[3].newsId;
+        document.getElementById('i3').hidden = true;
+        document.getElementById('i4').innerHTML = data.news[4].newsId;
+        document.getElementById('i4').hidden = true;
+
         // 페이지
         document.getElementsByClassName('current').innerHTML = parseInt(data.curPage);
 
@@ -493,6 +531,114 @@
 
 
   // 3. 해당 뉴스 선택시 news_id 넘겨주기 
+    $(document).ready(function(){
+      $('.full_news').click(function(){
+        var news_id = parseInt($(this).siblings().text());
+        get_News_id(news_id);
+    });
+    });
+
+    function get_News_id(news_id){
+      $.ajax({
+          url: 'blog-single.html?'+news_id,
+          type: 'POST',
+          data: { "newsId": news_id },
+          success: function(){
+            console.log('news_id',news_id);
+            let url = `blog-single.html&id=${news_id}`;
+            location.replace(url);
+          }
+      })
+    };
+
+  // 4. 카테고리 클릭시 해당 news 불러오기
+
+    $(document).ready(function(){
+      $('.categories ul li').click(function(){
+        console.log('category');
+        var category = $(this).find('a').text().split("(")[0];
+        category = category.replace(" ","");
+        console.log(category);
+        // $(this).addClass('active');
+        // $(this).siblings().removeClass('active');
+        get_category(category);
+    });
+    });
+
+    function get_category(category){
+        $.ajax({
+        url: 'https://30a3cdf5231a.ngrok.io/news',
+        type: 'GET',
+        data: { "category": category }
+      }).done((data, textStatus, jqXHR) => {
+        console.log('성공');
+        console.log(data);
+        console.log(data.category);
+
+        // 뉴스기사
+        document.getElementById('t0').innerHTML = data.news[0].title;
+        document.getElementById('t1').innerHTML = data.news[1].title;
+        document.getElementById('t2').innerHTML = data.news[2].title;
+        document.getElementById('t3').innerHTML = data.news[3].title;
+        document.getElementById('t4').innerHTML = data.news[4].title;
+
+
+        // 뉴스요약
+        document.getElementById('s0').innerHTML = data.news[0].summary;
+        document.getElementById('s1').innerHTML = data.news[1].summary;
+        document.getElementById('s2').innerHTML = data.news[2].summary;
+        document.getElementById('s3').innerHTML = data.news[3].summary;
+        document.getElementById('s4').innerHTML = data.news[4].summary;
+
+        // 뉴스 날짜
+        document.getElementById('d0').innerHTML = data.news[0].date;
+        document.getElementById('d1').innerHTML = data.news[1].date;
+        document.getElementById('d2').innerHTML = data.news[2].date;
+        document.getElementById('d3').innerHTML = data.news[3].date;
+        document.getElementById('d4').innerHTML = data.news[4].date;
+
+        // 뉴스 미디어
+        document.getElementById('m0').innerHTML = data.news[0].media;
+        document.getElementById('m1').innerHTML = data.news[1].media;
+        document.getElementById('m2').innerHTML = data.news[2].media;
+        document.getElementById('m3').innerHTML = data.news[3].media;
+        document.getElementById('m4').innerHTML = data.news[4].media;
+
+        // 뉴스 아이디
+        document.getElementById('i0').innerHTML = data.news[0].newsId;
+        document.getElementById('i0').hidden = true;
+        document.getElementById('i1').innerHTML = data.news[1].newsId;
+        document.getElementById('i1').hidden = true;
+        document.getElementById('i2').innerHTML = data.news[2].newsId;
+        document.getElementById('i2').hidden = true;
+        document.getElementById('i3').innerHTML = data.news[3].newsId;
+        document.getElementById('i3').hidden = true;
+        document.getElementById('i4').innerHTML = data.news[4].newsId;
+        document.getElementById('i4').hidden = true;
+
+        // 페이지
+        document.getElementsByClassName('current').innerHTML = parseInt(data.curPage);
+
+        console.log(textStatus);
+        console.log(jqXHR);
+      }).fail((jqXHR, textStatus, errorThrown) => {
+        console.log('실패');
+        console.log(jqXHR);
+        console.log(textStatus);
+        console.log(errorThrown);
+      }).always((param1, param2, param3) => {
+        console.log('종료');
+        console.log(param1);
+        console.log(param2);
+        console.log(param3);
+      }).then((data, textStatus, jqXHR) => {
+        console.log('성공 캐이스')
+      }, (jqXHR, textStatus, errorThrown) => {
+        console.log('실패 캐이스')
+      });
+
+    }
+
 
   </script>
 
