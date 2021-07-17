@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Pricing - Eterna Bootstrap Template</title>
+  <title>Pin</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -77,8 +77,8 @@
   </style>
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets\img\clients\투명아이콘 오른쪽.png" rel="icon">
+  <link href="assets\img\보아즈 어드브 중간 발표_모델.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link
@@ -161,14 +161,21 @@
     <section id="pricing" class="pricing">
       <div class="container">
         <div class="row">
-
           <nav class="accordion arrows">
             <input type="radio" name="accordion" id="cb0" />
             <section class="box">
 
-              <label class="box-title" for="cb0" style="font-family:'kbold'; font-size: 22px;">PIN 서비스 이용 튜토리얼</label>
+              <label class="box-title" for="cb0" style="font-family:'kbold'; font-size: 22px;">PIN 서비스 이용팁</label>
               <label class="box-close" for="acc-close"></label>
-              <div class="box-content">Click on an item to open. Click on its header or the list header to close.</div>
+              <div class="box-content" style = 'font-family: kmedium;'>
+                1. 뉴스 제목과 본문을 입력하세요.
+                <br>
+                2. 뉴스와 가장 관련 있는 카테고리를 선택한 후, 제출 버튼을 눌러주세요.
+                <br>
+                3. 오른쪽에서 유사도가 높은 판례 3개를 확인해주세요.
+                <br>
+                4. 관련 법을 더 자세하게 확인하고 싶으시다면, '관련 법규 이동'을 눌러주세요.
+              </div>
             </section>
           </nav>
 
@@ -181,23 +188,32 @@
                 <input type="text" name="name" class="form-control">
               </div>
               <br>
-              <div class="form-group">
-                <label style="font-family:'kbold';">카테고리 선택:</label><br />
-                <label><input type="checkbox" name="category" value="education"> 교육</label>
-                <label><input type="checkbox" name="category" value="issue"> 사건사고</label>
-                <label><input type="checkbox" name="category" value="labor"> 노동</label>
-                <label><input type="checkbox" name="category" value="press"> 언론</label>
-                <label><input type="checkbox" name="category" value="environment"> 환경</label>
-                <label><input type="checkbox" name="category" value="humanity"> 인권/복지</label>
-                <label><input type="checkbox" name="category" value="person"> 인물</label>
-                <label><input type="checkbox" name="category" value="society"> 사회일반</label>
 
-                <!-- <input type="text" name="tags" placeholder="Tags" class="tm-input form-control tm-input-info" /> -->
+              <div class="form-group">
+                <label style="font-family:'kbold';">뉴스 본문:</label>
+                <textarea class="form-control" style="height:300px;" id="news" ></textarea>
               </div>
               <br>
+
               <div class="form-group">
-                <label style="font-family:'kbold';">뉴스 입력:</label>
-                <textarea class="form-control" style="height:300px;" id="news" ></textarea>
+                <label style="font-family:'kbold';">카테고리 선택:</label><br />
+                <label style="font-family: 'kmedium'"><input type="checkbox" name="category" value="education"> 교육</label>
+                &nbsp;
+                <label style="font-family: 'kmedium'"><input type="checkbox" name="category" value="issue"> 사건사고</label>
+                &nbsp;
+                <label style="font-family: 'kmedium'"><input type="checkbox" name="category" value="labor"> 노동</label>
+                &nbsp;
+                <label style="font-family: 'kmedium'"><input type="checkbox" name="category" value="press"> 언론</label>
+                &nbsp;
+                <label style="font-family: 'kmedium'"><input type="checkbox" name="category" value="environment"> 환경</label>
+                &nbsp;
+                <label style="font-family: 'kmedium'"><input type="checkbox" name="category" value="humanity"> 인권/복지</label>
+                &nbsp;
+                <label style="font-family: 'kmedium'"><input type="checkbox" name="category" value="person"> 인물</label>
+                &nbsp;
+                <label style="font-family: 'kmedium'"><input type="checkbox" name="category" value="society"> 사회일반</label>
+
+                <!-- <input type="text" name="tags" placeholder="Tags" class="tm-input form-control tm-input-info" /> -->
               </div>
               <br>
 
@@ -235,13 +251,6 @@
                 <label class="box-title" for="cb3" style="font-family:'kmedium';">유사 판례 3</label>
                 <label class="box-close" for="acc-close"></label>
                 <div id="sp3" class="box-content"></div>
-              </section>
-              <input type="radio" name="accordion" id="cb4" />
-              <section class="box">
-                <label class="box-title" for="cb4" style="font-family:'kmedium';">요약/용어 설명</label>
-                <label class="box-close" for="acc-close"></label>
-                <div class="box-content">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-                  cubilia Curae; Quisque finibus tristique nisi, maximus ullamcorper ante finibus eget.</div>
               </section>
               <input type="radio" name="accordion" id="cb5" />
               <section class="box">
