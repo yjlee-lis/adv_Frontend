@@ -98,7 +98,7 @@
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">media</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a id = "media" href="blog-single.html">media</a></li>
                   <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time id="date" datetime="2020-01-01"></time></a></li>
                 </ul>
               </div>
@@ -246,6 +246,8 @@
   <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="getID.js"></script>
+
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
@@ -255,7 +257,7 @@
     var URL = 'https://104e52a942c8.ngrok.io/news';
 
     // 1. 뉴스 아이디 넘겨받기
-    var news_id = 1;
+    var news_id = get_News_id();
   
     // 2. 뉴스 아이디에 해당하는 뉴스 GET 
     $.ajax({
@@ -267,6 +269,7 @@
         console.log(data.newsId);
         document.getElementById('title').innerHTML = data.title;
         document.getElementById('content').innerHTML = data.content;
+        document.getElementById('media').innerHTML = data.media;
         document.getElementById('date').innerHTML = data.date;
         document.getElementById('summary').innerHTML = data.summary;
         console.log(textStatus);

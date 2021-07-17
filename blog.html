@@ -94,7 +94,7 @@
             <article class="entry">
 
               <h2 class="entry-title">
-                <a class = "full_news" id="t0" href=""></a><a id="i0"></a>
+                <a class = "full_news" id="t0" href="#"></a><a id="i0"></a>
               </h2>
 
               <div class="entry-meta">
@@ -360,6 +360,7 @@
   <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="getID.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
@@ -536,22 +537,10 @@
     $(document).ready(function(){
       $('.full_news').click(function(){
         var news_id = parseInt($(this).siblings().text());
-        get_News_id(news_id);
+        console.log('newsID value', news_id);
+        set_News_id(news_id);
     });
     });
-
-    function get_News_id(news_id){
-      $.ajax({
-          url: 'blog-single.html?'+news_id,
-          type: 'POST',
-          data: { "newsId": news_id },
-          success: function(){
-            console.log('news_id',news_id);
-            let url = `blog-single.html&id=${news_id}`;
-            location.replace(url);
-          }
-      })
-    };
 
   // 4. 카테고리 클릭시 해당 news 불러오기
 
@@ -561,8 +550,8 @@
         var category = $(this).find('a').text().split("(")[0];
         category = category.replace(" ","");
         console.log(category);
-        // $(this).addClass('active');
-        // $(this).siblings().removeClass('active');
+        $(this).find('a').addClass('active');
+        $(this).siblings().find('a').removeClass('active');
         get_category(category);
     });
     });
