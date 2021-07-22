@@ -439,7 +439,7 @@
 
   <!-- 서버통신 -->
   <script>
-    var URL = 'https://104e52a942c8.ngrok.io/news';
+    var URL = 'https://48b9467ef22f.ngrok.io/news';
 
     // 1. 페이지 지정
     var page = 1;
@@ -609,7 +609,7 @@
       $('.full_news').click(function(){
         var news_id = parseInt($(this).siblings().text());
         console.log('newsID value', news_id);
-        set_News_id(news_id);
+        set_id_single(news_id);
     });
     });
 

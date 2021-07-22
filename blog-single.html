@@ -116,7 +116,7 @@
 
             </article><!-- End blog entry -->
 
-            <a href = "pricing.html">PIN Page</a>
+            <a id="to_pin" href = "#">PIN Page</a>
           </div><!-- End blog entries list -->
 
           <div class="col-lg-4">
@@ -254,7 +254,7 @@
 
   <script>
 
-    var URL = 'https://104e52a942c8.ngrok.io/news';
+    var URL = 'https://48b9467ef22f.ngrok.io/news';
 
     // 1. 뉴스 아이디 넘겨받기
     var news_id = get_News_id();
@@ -279,6 +279,16 @@
         console.log(jqXHR);
         console.log(textStatus);
         console.log(errorThrown);
+    });
+
+    // 3. 뉴스 아이디를 pin으로 넘기기
+
+
+    $(document).ready(function(){
+      $('#to_pin').click(function(){
+        console.log('newsID value', news_id);
+        set_id_pin(news_id);
+    });
     });
 
   </script>
