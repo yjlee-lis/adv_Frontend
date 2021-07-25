@@ -163,9 +163,8 @@
 
             <!-- Start news entry-->
             <article class="entry">
-
               <h2 class="entry-title">
-                <a class = "full_news" id="t0" href="#"></a><a id="i0"></a>
+                <a class = "full_news" id="t0" href="#"></a><a id="i0" style="all:initial;"></a>
               </h2>
 
               <div class="entry-meta">
@@ -180,7 +179,7 @@
               <div class="entry-content">
                 <p id='s0'></p>
                 <div class="read-more">
-                  <a class = "full_news" href="news_single.html">Read More</a>
+                  <a class = "full_news" href="#">Read More</a><a id="i0_read" style="all:initial;"></a>
                 </div>
               </div>
 
@@ -189,9 +188,8 @@
 
             <!-- Start news entry-->
             <article class="entry">
-
               <h2 class="entry-title">
-                <a class = "full_news" id="t1" href="#"></a><a id="i1"></a>
+                <a class = "full_news" id="t1" href="#"></a><a id="i1" style="all:initial;"></a>
               </h2>
 
               <div class="entry-meta">
@@ -206,7 +204,7 @@
               <div class="entry-content">
                 <p id='s1'></p>
                 <div class="read-more">
-                  <a class = "full_news" href="news_single.html">Read More</a>
+                  <a class = "full_news" href="#">Read More</a><a id="i1_read" style="all:initial;"></a>
                 </div>
               </div>
 
@@ -215,9 +213,8 @@
 
             <!-- Start news entry-->
             <article class="entry">
-
               <h2 class="entry-title">
-                <a class = "full_news" id="t2" href="#"></a><a id="i2"></a>
+                <a class = "full_news" id="t2" href="#"></a><a id="i2" style="all:initial;"></a>
               </h2>
 
               <div class="entry-meta">
@@ -232,7 +229,8 @@
               <div class="entry-content">
                 <p id='s2'></p>
                 <div class="read-more">
-                  <a class = "full_news" href="news_single.html">Read More</a>
+                  <a class = "full_news" href="#">Read More</a>
+                  <a id="i2_read" style="all:initial;"></a>
                 </div>
               </div>
 
@@ -241,9 +239,8 @@
 
             <!-- Start news entry-->
             <article class="entry">
-
               <h2 class="entry-title">
-                <a class = "full_news" id="t3" href="#"></a><a id="i3"></a>
+                <a class = "full_news" id="t3" href="#"></a><a id="i3" style="all:initial;"></a>
               </h2>
 
               <div class="entry-meta">
@@ -258,7 +255,8 @@
               <div class="entry-content">
                 <p id='s3'></p>
                 <div class="read-more">
-                  <a class="full_news" href="news_single.html">Read More</a>
+                  <a class="full_news" href="#">Read More</a>
+                  <a id="i3_read" style="all:initial;"></a>
                 </div>
               </div>
 
@@ -267,9 +265,8 @@
 
             <!-- Start news entry-->
             <article class="entry">
-
               <h2 class="entry-title">
-                <a class="full_news" id="t4" href="#"></a><a id="i4"></a>
+                <a class="full_news" id="t4" href="#"></a><a id="i4" style="all:initial;"></a>
               </h2>
 
               <div class="entry-meta">
@@ -283,7 +280,8 @@
               <div class="entry-content">
                 <p id='s4'></p>
                 <div class="read-more">
-                  <a class="full_news" href="news_single.html">Read More</a>
+                  <a class="full_news" href="#">Read More</a>
+                  <a id="i4_read" style="all:initial;"></a>
                 </div>
               </div>
 
@@ -508,6 +506,17 @@
         document.getElementById('i4').innerHTML = data.news[4].newsId;
         document.getElementById('i4').hidden = true;
 
+        document.getElementById('i0_read').innerHTML = data.news[0].newsId;
+        document.getElementById('i0_read').hidden = true;
+        document.getElementById('i1_read').innerHTML = data.news[1].newsId;
+        document.getElementById('i1_read').hidden = true;
+        document.getElementById('i2_read').innerHTML = data.news[2].newsId;
+        document.getElementById('i2_read').hidden = true;
+        document.getElementById('i3_read').innerHTML = data.news[3].newsId;
+        document.getElementById('i3_read').hidden = true;
+        document.getElementById('i4_read').innerHTML = data.news[4].newsId;
+        document.getElementById('i4_read').hidden = true;
+
         // 페이지
         document.getElementsByClassName('current').innerHTML = parseInt(data.curPage);
 
@@ -580,6 +589,17 @@
         document.getElementById('i4').innerHTML = data.news[4].newsId;
         document.getElementById('i4').hidden = true;
 
+        document.getElementById('i0_read').innerHTML = data.news[0].newsId;
+        document.getElementById('i0_read').hidden = true;
+        document.getElementById('i1_read').innerHTML = data.news[1].newsId;
+        document.getElementById('i1_read').hidden = true;
+        document.getElementById('i2_read').innerHTML = data.news[2].newsId;
+        document.getElementById('i2_read').hidden = true;
+        document.getElementById('i3_read').innerHTML = data.news[3].newsId;
+        document.getElementById('i3_read').hidden = true;
+        document.getElementById('i4_read').innerHTML = data.news[4].newsId;
+        document.getElementById('i4_read').hidden = true;
+
         // 페이지
         document.getElementsByClassName('current').innerHTML = parseInt(data.curPage);
 
@@ -608,6 +628,7 @@
     $(document).ready(function(){
       $('.full_news').click(function(){
         var news_id = parseInt($(this).siblings().text());
+        // var news_id = parseInt($(this).parents().find('a.full_news_id').text());
         console.log('newsID value', news_id);
         set_id_single(news_id);
     });
@@ -677,6 +698,17 @@
         document.getElementById('i3').hidden = true;
         document.getElementById('i4').innerHTML = data.news[4].newsId;
         document.getElementById('i4').hidden = true;
+
+        document.getElementById('i0_read').innerHTML = data.news[0].newsId;
+        document.getElementById('i0_read').hidden = true;
+        document.getElementById('i1_read').innerHTML = data.news[1].newsId;
+        document.getElementById('i1_read').hidden = true;
+        document.getElementById('i2_read').innerHTML = data.news[2].newsId;
+        document.getElementById('i2_read').hidden = true;
+        document.getElementById('i3_read').innerHTML = data.news[3].newsId;
+        document.getElementById('i3_read').hidden = true;
+        document.getElementById('i4_read').innerHTML = data.news[4].newsId;
+        document.getElementById('i4_read').hidden = true;
 
         // 페이지
         document.getElementsByClassName('current').innerHTML = parseInt(data.curPage);
