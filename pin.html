@@ -230,7 +230,10 @@
 
           </div>
           <div class="col-md-4">
-            <div id = "loader" class = ""></div>
+            <div style="display: flex; justify-content: center;">
+              <div id = "loader" class = ""></div>
+            </div>
+            
             <nav class="accordion arrows">
               <header class="box">
                 <label for="acc-close" class="box-title" style="font-family:'kbold';">유사 판례 리스트</label>
@@ -395,7 +398,7 @@
     function getPrecedent() {
       news = document.getElementById('news').value;
       $("#loader").addClass('loader');
-      alert("입력되었습니다. 유사판례를 확인해보세요.");
+      // alert("입력되었습니다. 유사판례를 확인해보세요.");
       $.ajax({
         url: PIN_URL,
         type: 'POST',
